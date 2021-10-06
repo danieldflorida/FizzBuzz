@@ -43,15 +43,14 @@ function displayNumbers(numbers, fizz, buzz){
 
         //construct a row
         if((index + 1) % 5 == 1){
-            templateRows += `<tr><td>${temp}</td>`;
+            templateRows += `<tr><td class="${temp}">${temp}</td>`;
             if((index + 1) == numbers.length){
                 templateRows += `</tr>`;
             }
-        }
-        else if(((index + 1) % 5 == 0) || ((index + 1) == numbers.length)){
-            templateRows += `<td>${temp}</td></tr>`;
+        }else if(((index + 1) % 5 == 0) || ((index + 1) == numbers.length)){
+            templateRows += `<td class="${temp}">${temp}</td></tr>`;
         }else {
-            templateRows += `<td>${temp}</td>`;
+            templateRows += `<td class="${temp}">${temp}</td>`;
         }
 
         //else if((index + 1) == numbers.length){
