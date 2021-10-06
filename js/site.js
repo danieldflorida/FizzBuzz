@@ -3,8 +3,18 @@ function getValues(){
     let numbers = [];
     let fizz = document.getElementById("fizz").value;
     let buzz = document.getElementById("buzz").value;
-    numbers = generateNumbers();
-    displayNumbers(numbers, fizz, buzz);
+
+    fizz = parseInt(fizz);
+    buzz = parseInt(buzz);
+
+    if(Number.isInteger(fizz) && Number.isInteger(buzz)){
+        numbers = generateNumbers();
+        displayNumbers(numbers, fizz, buzz);
+    }else {
+        alert("You must enter integers");
+    }
+
+    
 }
 
 
